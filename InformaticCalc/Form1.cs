@@ -19,6 +19,11 @@ namespace InformaticCalc
             this.Hide();
         }
 
-
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form step2 = new FromDec();
+            step2.Show();
+            this.Hide();
+        }
     }
 }

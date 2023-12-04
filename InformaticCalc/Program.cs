@@ -14,21 +14,6 @@ namespace InformaticCalc
             Application.Run(new Form1());
 
         }
-        static string ConvertFromDecimal(int decimalNumber, int baseNumber)
-        {
-            string result = "";
-
-            while (decimalNumber > 0)
-            {
-                int remainder = decimalNumber % baseNumber;
-                decimalNumber /= baseNumber;
-
-                result = DigitToChar(remainder) + result;
-            }
-
-            return result;
-        }
-
         public static char DigitToChar(int digit)
         {
             if (digit < 10)

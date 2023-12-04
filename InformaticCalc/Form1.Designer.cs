@@ -98,6 +98,7 @@
             button5.TabIndex = 5;
             button5.Text = "перевод из десятичной";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // Form1
             // 

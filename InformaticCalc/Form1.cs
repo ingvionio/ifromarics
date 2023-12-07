@@ -25,5 +25,12 @@ namespace InformaticCalc
             step2.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form add = new ADD();
+            add.Show();
+            this.Hide();
+        }
     }
 }

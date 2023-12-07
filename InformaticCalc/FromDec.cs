@@ -94,5 +94,10 @@ namespace InformaticCalc
             start.Show();
             this.Close();
         }
+
+        private void ans_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

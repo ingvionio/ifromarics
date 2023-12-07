@@ -39,33 +39,38 @@
             // ans
             // 
             ans.BackColor = SystemColors.GradientActiveCaption;
-            ans.Location = new Point(760, 71);
+            ans.Location = new Point(869, 97);
+            ans.Margin = new Padding(3, 4, 3, 4);
             ans.Multiline = true;
             ans.Name = "ans";
             ans.ScrollBars = ScrollBars.Vertical;
-            ans.Size = new Size(414, 240);
+            ans.Size = new Size(473, 319);
             ans.TabIndex = 16;
+            ans.TextChanged += ans_TextChanged;
             // 
             // BaseNum
             // 
-            BaseNum.Location = new Point(267, 386);
+            BaseNum.Location = new Point(305, 515);
+            BaseNum.Margin = new Padding(3, 4, 3, 4);
             BaseNum.Name = "BaseNum";
-            BaseNum.Size = new Size(148, 23);
+            BaseNum.Size = new Size(169, 27);
             BaseNum.TabIndex = 15;
             // 
             // Num
             // 
-            Num.Location = new Point(267, 343);
+            Num.Location = new Point(305, 460);
+            Num.Margin = new Padding(3, 4, 3, 4);
             Num.Name = "Num";
-            Num.Size = new Size(148, 23);
+            Num.Size = new Size(169, 27);
             Num.TabIndex = 14;
             // 
             // ReturnBegin
             // 
             ReturnBegin.BackColor = SystemColors.HotTrack;
-            ReturnBegin.Location = new Point(352, 476);
+            ReturnBegin.Location = new Point(402, 635);
+            ReturnBegin.Margin = new Padding(3, 4, 3, 4);
             ReturnBegin.Name = "ReturnBegin";
-            ReturnBegin.Size = new Size(177, 51);
+            ReturnBegin.Size = new Size(202, 68);
             ReturnBegin.TabIndex = 13;
             ReturnBegin.Text = "вернуться в начало";
             ReturnBegin.UseVisualStyleBackColor = false;
@@ -74,20 +79,22 @@
             // startWindowText
             // 
             startWindowText.BackColor = SystemColors.Info;
-            startWindowText.Location = new Point(267, 71);
+            startWindowText.Location = new Point(305, 97);
+            startWindowText.Margin = new Padding(3, 4, 3, 4);
             startWindowText.Multiline = true;
             startWindowText.Name = "startWindowText";
             startWindowText.ScrollBars = ScrollBars.Vertical;
-            startWindowText.Size = new Size(414, 240);
+            startWindowText.Size = new Size(473, 319);
             startWindowText.TabIndex = 12;
             startWindowText.Text = "Введи в верхнее поле число в десятичной системе, а в нижнее основание системы исчисления, в которую необходимо перевести число";
             // 
             // NextStep
             // 
             NextStep.BackColor = SystemColors.HotTrack;
-            NextStep.Location = new Point(829, 476);
+            NextStep.Location = new Point(947, 635);
+            NextStep.Margin = new Padding(3, 4, 3, 4);
             NextStep.Name = "NextStep";
-            NextStep.Size = new Size(177, 51);
+            NextStep.Size = new Size(202, 68);
             NextStep.TabIndex = 11;
             NextStep.Text = "следующий шаг";
             NextStep.UseVisualStyleBackColor = false;
@@ -95,15 +102,16 @@
             // 
             // FromDec
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1476, 663);
+            ClientSize = new Size(1687, 884);
             Controls.Add(ans);
             Controls.Add(BaseNum);
             Controls.Add(Num);
             Controls.Add(ReturnBegin);
             Controls.Add(startWindowText);
             Controls.Add(NextStep);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FromDec";
             Text = "FromDec";
             ResumeLayout(false);

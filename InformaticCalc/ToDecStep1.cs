@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Configuration;
+using System.Numerics;
 
 namespace InformaticCalc
 {
@@ -23,21 +24,43 @@ namespace InformaticCalc
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            string num = Num.Text;
+
             if (Num.Text == "" || BaseNum.Text == "")
             {
                 MessageBox.Show("вы не ввели число или основание");
                 return;
             }
-            string num = Num.Text;
+            try
+            {
+                int.Parse(BaseNum.Text);
+                for (int i = 0; i < num.Length; i++)
+                {
+                    int miss = Program.CharToDigit(num[i]);
+                    if (miss == -1)
+                    {
+                        return;
+                    }
+                }
+            }
+            catch
+            {
+                return;
+            }
             int baseNum = int.Parse(BaseNum.Text);
+
+            Num.ReadOnly = true;
+            BaseNum.ReadOnly = true;
 
             if (stepNum == 0)
             {
                 int count = 0;
-                startWindowText.Text = "Если основание нашей системы больше 10, то для начала нам нужно перевести все буквы в числа, заглавные буквы - это числа от 10 до 36, строчные буквы - это числа от 37 до 50(чем дальше число в алфавите, тем большее число оно обозначает. Теперь давай запишем наше число без букв.)";
+                startWindowText.Text = "Если основание нашей системы больше 10, то для начала нам нужно перевести все буквы в числа, заглавные буквы - это числа от 10 до 36, строчные буквы - это числа от 37 до 62(чем дальше число в алфавите, тем большее число оно обозначает. Теперь давай запишем наше число без букв.)";
                 for (int i = 0; i <= num.Length - 1; i++)
                 {
                     int digit = Program.CharToDigit(num[i]);
+                    if (digit == -1)
+                        return;
                     ans.Text += digit.ToString() + " ";
                 }
                 stepNum++;
@@ -54,7 +77,7 @@ namespace InformaticCalc
                     if (digit >= baseNum)
                     {
                         MessageBox.Show("Введённое число некорректно. Значение одного из разрядов больше основания системы.");
-                        throw new ArgumentException("Invalid digit for the specified base");
+                        return;
                     }
                     ans.Text += digit.ToString() + " ";
                 }

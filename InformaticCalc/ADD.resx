@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="startWindowText.Text" xml:space="preserve">
+    <value>Введи два числа, которые хочешь сложить  и СС этих чисел.
+Сложение в разных системах счисления работает почти так же, как и в десятичной системе счисления. Какие же существуют различия между разными системами счисления? Самое важное отличие, которое меняет процесс сложение это количество чисел.
+
+Поскольку во всех системах счисления цифры начинаются с нуля, то количество цифр сводится к максимально допустимой цифре.
+
+К примеру, в десятичной системе счисления максимальная цифра девять, а вот в двоичной - единица.
+
+При сложении (в столбик) всегда когда у нас сумма становится больше или равно десяти, то переносим единицу в следующий разряд. А в двоичной системе счисления переносится единица в следующий разряд, когда сумма больше или равна двум.
+
+Отсюда можем сделать вывод: “Когда сумма становится больше или равна основанию системы счисления, то переносим единицу в следующий разряд”.</value>
+  </data>
+  <metadata name="ans1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ans2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="plus.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="answer.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

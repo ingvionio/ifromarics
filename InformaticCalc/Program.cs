@@ -24,7 +24,7 @@ namespace InformaticCalc
             {
                 return (char)('A' + digit - 10);
             }
-            else if (digit < 51)
+            else if (digit < 63)
             {
                 return (char)('a' + digit - 36);
             }
@@ -41,18 +41,18 @@ namespace InformaticCalc
             {
                 return c - '0';
             }
-            else if (char.IsUpper(c))
+            else if (char.IsUpper(c) && c >= 'A' && c <= 'Z')
             {
                 return char.ToUpper(c) - 'A' + 10;
             }
-            else if (char.IsLower(c))
+            else if (char.IsLower(c) && c >= 'a' && c <= 'z')
             {
                 return char.ToUpper(c) - 'a' + 36;
             }
             else
             {
                 MessageBox.Show("неверные данные");
-                throw new ArgumentException("Invalid character");
+                return -1;
             }
         }
 
@@ -87,26 +87,10 @@ namespace InformaticCalc
             if (index < number.Length)
             {
                 char digitChar = number[number.Length - 1 - index];
-                return ConvertToInt(digitChar);
+                return CharToDigit(digitChar);
             }
 
             return 0;
-        }
-
-        static int ConvertToInt(char digit)
-        {
-            if (char.IsDigit(digit))
-            {
-                return Convert.ToInt32(digit.ToString());
-            }
-            else if (char.IsUpper(digit))
-            {
-                return char.ToUpper(digit) - 'A' + 10;
-            }
-            else
-            {
-                return char.ToLower(digit) - 'a' + 36;
-            }
         }
     }
 
